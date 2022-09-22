@@ -1,0 +1,89 @@
+.menu{
+    header a{
+        padding: 0% 0 1%;
+        gap:22%;
+            i {
+                color: black;
+                font-size:150%;
+                position: absolute;
+                left: 8%;
+            }
+    }
+    .bg-img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+    }    
+    main{
+        position: relative;
+        #container {
+            position: relative;
+            padding:8% 5%;
+            margin-top: -70px;
+            background-color: $second-background;
+            border-radius: 50px 50px 0 0;
+            @extend .flex-col;
+            @include desktop-flex;
+            @include desktop-smaller;
+            #title {    
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 6%;
+                h1{
+                    margin:0;
+                    font-family: $title, cursive;
+                    font-weight: 100;
+                    font-size: 175%;
+                }
+                i {
+                    font-size: 200%;
+                    font-weight: 100;
+                }
+            }
+            section {
+                margin-bottom: 3%;
+                @include desktop-element;
+                h2{
+                    font-weight: 300;
+                    font-size: 110%;
+                    text-transform: uppercase;
+                    padding: 1% 0;
+                    border-bottom: $colour-tertiary 3px solid;
+                    width: 12%;
+                }
+                .flex{
+                    gap: 15px;
+                    @extend .flex-col;
+                    >div{
+                        background-color: #fff;
+                        border-radius: 20px 20px 20px 20px;
+                        padding: 3% 7% 4% 3%;
+                        @extend .box-shadow;
+                        h3{
+                            margin:0 0 2%;
+                        }
+                        div{
+                            display: flex;
+                            justify-content: space-between;
+                            span:last-child{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+            .button {
+                align-self: center;
+                padding: 4% 12%;
+                margin: 9% 0;
+                @media (min-width:1000px) {
+                    flex-basis: 100%;
+                    margin: 2% 35%;
+                    text-align: center;
+                    padding: 2% 4%;
+                }
+            }
+        }
+    }
+}

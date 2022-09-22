@@ -1,0 +1,27 @@
+#premiere-section {
+    padding: 7% 4% 10% 6%;
+    @include desktop-flex;
+    @include desktop-smaller;
+    div {
+        padding: 7% 0%;
+        margin: 7% 0%;
+        border-radius: 20px;
+        background-color: $second-background;
+        @extend .box-shadow;
+        @include desktop-element;
+        i {
+            margin: 0 7%; 
+            font-size: 125%;
+            color:grey;
+        }
+        span {
+            font-weight: bold;
+        }
+        &:hover {
+            background-color: rgba(147,86,220,0.15);
+            i {
+                color: $colour-primary;
+            }
+        }
+    }
+}

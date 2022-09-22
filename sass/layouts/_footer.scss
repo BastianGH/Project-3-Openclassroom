@@ -1,0 +1,25 @@
+footer {
+    color:white;
+    background-color: #323232;
+    padding:5% 5% 10%;
+    gap:10px;
+    @extend .flex-col;
+    @include tablette-flex;
+    @include desktop-flex;
+    svg {
+        width: 30%;
+        .footer-img {
+            fill: white;
+        }
+    }
+    div {
+        display: flex;
+        i {
+            width: 35px
+        }
+    }
+    >* {
+        @include tablette-element;
+    }
+    
+}

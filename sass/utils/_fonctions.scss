@@ -1,0 +1,13 @@
+@for $i from 1 through 3 {
+    #premiere-section .div-#{$i}::before {
+        $newstring: "" + $i;
+      content: $newstring;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: $colour-primary;
+      color:white;
+      font-size: 80%;
+      position: relative;
+      right: 6px;
+    }
+  }

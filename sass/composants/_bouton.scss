@@ -1,0 +1,8 @@
+.button {
+    text-decoration: none;
+    color: white;
+    padding: 3% 6%;
+    border-radius: 40px;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    @extend .box-shadow;
+}

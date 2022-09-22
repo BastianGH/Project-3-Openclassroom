@@ -1,0 +1,19 @@
+{
+  "name": "projet-3-openclassroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BastianGH/Project-3-Openclassroom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BastianGH/Project-3-Openclassroom/issues"
+  },
+  "homepage": "https://github.com/BastianGH/Project-3-Openclassroom#readme"
+}
