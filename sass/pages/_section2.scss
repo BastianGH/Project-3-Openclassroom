@@ -1,4 +1,4 @@
-#seconde-section {
+.seconde-section {
     background-color: $second-background;
     padding: 5%;
     justify-content: space-between;
@@ -8,13 +8,13 @@
     @include tablette-flex;
     @include desktop-flex;
     @include desktop-smaller;
-    h1 {
+    &__title {
         margin:10% 0 0;
         @media (min-width:1000px) {
             margin: 0;
         }
     }
-    figure {
+    &-figure {
         flex-basis: 20%;
         background-color: #fff;
         border-radius: 25px;
@@ -31,6 +31,7 @@
             color: green;
             font-weight: bold;
             @include tablette-nouveau;
+            @include desktop-nouveau;
         }
         img {
             width: 100%;
@@ -38,12 +39,12 @@
             object-fit: cover;
             border-radius: 25px 25px 0 0;
         }
-        figcaption {
+        &-description {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
             padding: 4%;
-            div:first-child {
+            &__heart {
                 font-size: 180%;
                 i:last-child {
                     opacity: 0;
@@ -57,14 +58,14 @@
                     i:last-child {
                         opacity: 1;
                         position: relative;
-                        color: $colour-primary;// utiliser 2 coeur distincts, utiliser opacity pour la transition
+                        color: $colour-primary;
                     }                     
                 }
             }
-            }
-            h2 {
+            &__title {
                 margin: 0 0 5px;
                 font-size: 120%;
             }
-        }
+        }  
     }
+}

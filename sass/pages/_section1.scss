@@ -1,20 +1,20 @@
-#premiere-section {
+.premiere-section {
     padding: 7% 4% 10% 6%;
     @include desktop-flex;
     @include desktop-smaller;
-    div {
+    &__div {
         padding: 7% 0%;
         margin: 7% 0%;
         border-radius: 20px;
         background-color: $second-background;
         @extend .box-shadow;
         @include desktop-element;
-        i {
+        &__fa {
             margin: 0 7%; 
             font-size: 125%;
             color:grey;
         }
-        span {
+        &__text {
             font-weight: bold;
         }
         &:hover {

@@ -1,5 +1,5 @@
 @for $i from 1 through 3 {
-    #premiere-section .div-#{$i}::before {
+    .premiere-section .div-#{$i}::before {
         $newstring: "" + $i;
       content: $newstring;
       padding: 5px;
