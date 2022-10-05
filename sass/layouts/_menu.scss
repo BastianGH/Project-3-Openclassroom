@@ -55,21 +55,78 @@
                 &-repas{
                     gap: 15px;
                     @extend .flex-col;
-                    >div{
+                    &_content{
+                        position: relative;
                         background-color: #fff;
                         border-radius: 20px 20px 20px 20px;
-                        padding: 3% 7% 4% 3%;
+                        padding-left: 3%;
+                        display: flex;
+                        justify-content: space-between;
                         @extend .box-shadow;
+                        &:nth-child(1) {
+                            animation: menu_pop-up 800ms both; 
+                        }
+                        &:nth-child(2) {
+                            animation: menu_pop-up 800ms 200ms both;
+                        }
+                        &:nth-child(3) {
+                            animation: menu_pop-up 800ms 400ms both;
+                        }
+                        i{
+                            font-size: 170%;
+                            color: white;
+                        }
+                        &_text {
+                            padding: 3% 0 4%;
+                            flex-basis: 100%;
+                            z-index: 1;                         
+                            div{
+                                display: flex;
+                                justify-content: space-between;
+                                span {
+                                    text-overflow: ellipsis;
+                                }   
+                            }
+                            &_prix{
+                                font-weight: bold;
+                            }
+                        }
+                        &_check {
+                            background-color: $colour-tertiary;
+                            border-radius: 0 20px 20px 0;
+                            flex-basis: 0%;
+                            opacity: 1;
+                            transform: scaleX(0);
+                        }
+                        &:hover {
+                            /***** FINITIONS A PRODUIRE SUR L'ANIMATION ******/ 
+                            /*** -Le texte doit afficher "..." au lieu de passer à la ligne  ***/
+                            /*** -La boite verte doit repartir de la même manière mais sans la rotation  ***/
+                            /*** -Vérifier que la boite verte se comporte comme on l'attend au final  ***/
+                            .menu-main-container-carte-repas_content_check {
+                                transform-origin: 100% 50%;
+                                transform: scaleX(1);
+                                flex-basis: 19%;
+                                padding: 6%;
+                                opacity: 1;
+                                transition: transform 500ms, flex-basis 500ms, padding 1ms;
+                                i {
+                                    transform-origin: 50% 50%;
+                                    transform: rotate(360deg);                                    
+                                    transition: transform 500ms 100ms;
+                                }
+                            }
+                            .menu-main-container-carte-repas_content_text {
+                                flex-basis: 75%;
+                                transition: flex-basis 500ms;   
+                                span:first-child {
+                                    flex-basis: 90%;
+                                }                
+                            }
+                        }
                         h3{
                             margin:0 0 2%;
                         }
-                        div{
-                            display: flex;
-                            justify-content: space-between;
-                        }
-                    }
-                    &__prix{
-                        font-weight: bold;
                     }
                 }              
             }
