@@ -4,8 +4,52 @@
     box-sizing: border-box;
     body {
         margin: 0;
+        padding:0;
+        height:100%;
+    }
+    html {
+        height:100%;
     }
     a {
         text-decoration: none;
+    }
+    .container {
+        position: relative;
+        min-height: 100%;
+        main {
+            position: relative;
+            min-height: 100%;
+            padding-bottom: 40%;
+            @media screen and (max-width: 300px ) {
+                padding-bottom: 60%;
+            }
+            @media screen and (min-width: 600px ) {
+                padding-bottom: 20%;
+            }
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .menu {
+        .container main {
+            padding-bottom: 40%;
+            @media screen and (max-width: 400px ) {
+                padding-bottom: 53%;
+            }
+            @media screen and (min-width: 599px ) {
+                padding-bottom: 30%;
+            }
+            @media screen and (min-width: 730px ) {
+                padding-bottom: 25%;
+            }
+            @media screen and (min-width: 1000px ) {
+                padding-bottom: 21%;
+            }
+            @media screen and (min-width: 1400px ) {
+                padding-bottom: 19%;
+            }
+        }
     }
 }

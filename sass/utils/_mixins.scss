@@ -14,8 +14,8 @@
 }
 @mixin tablette-nouveau {
     @media (min-width: 599px) and (max-width: 1000px) {
-       top: 6%;
-       left: 55%;
+       top: 6px;
+       right: 25px;
        padding: 3% 6%;
     }
 }
@@ -32,7 +32,7 @@
 }
 @mixin desktop-element {
     @media (min-width: 1000px) {
-        flex-basis:30%;
+        flex-basis: 30%;
         margin: 0;
         padding: 2% 2% 2% 0;
     }
@@ -44,8 +44,8 @@
 }
 @mixin desktop-nouveau {
     @media (min-width: 1000px) {
-       top: 5%;
-       left: 50%;
+       top: 6px;
+       right: 20px;
        padding: 3% 6%;
     }
 }

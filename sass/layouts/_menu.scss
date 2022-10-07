@@ -62,6 +62,7 @@
                         padding-left: 3%;
                         display: flex;
                         justify-content: space-between;
+                        z-index: 0;
                         @extend .box-shadow;
                         &:nth-child(1) {
                             animation: menu_pop-up 800ms both; 
@@ -78,50 +79,66 @@
                         }
                         &_text {
                             padding: 3% 0 4%;
-                            flex-basis: 100%;
-                            z-index: 1;                         
+                            width: 100%;
+                            z-index: 1;   
+                            transition: width 500ms;
+                            h3 {
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }                      
                             div{
                                 display: flex;
                                 justify-content: space-between;
-                                span {
+                                transition: justify-content 500ms;
+                                span:first-child {
                                     text-overflow: ellipsis;
-                                }   
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+                                span:last-child {
+                                    width: 15%;
+                                } 
                             }
                             &_prix{
                                 font-weight: bold;
                             }
                         }
                         &_check {
+                            position: absolute;
                             background-color: $colour-tertiary;
                             border-radius: 0 20px 20px 0;
                             flex-basis: 0%;
-                            opacity: 1;
-                            transform: scaleX(0);
+                            opacity: 0;
+                            transform-origin: 0% 50%;
+                            right: -67px;
+                            z-index: 0;
+                            padding: 6%;   
+                            transition: right 500ms, opacity 500ms, z-index 1ms, padding 1ms 500ms;
                         }
                         &:hover {
                             /***** FINITIONS A PRODUIRE SUR L'ANIMATION ******/ 
-                            /*** -Le texte doit afficher "..." au lieu de passer à la ligne  ***/
-                            /*** -La boite verte doit repartir de la même manière mais sans la rotation  ***/
                             /*** -Vérifier que la boite verte se comporte comme on l'attend au final  ***/
                             .menu-main-container-carte-repas_content_check {
-                                transform-origin: 100% 50%;
-                                transform: scaleX(1);
-                                flex-basis: 19%;
-                                padding: 6%;
-                                opacity: 1;
-                                transition: transform 500ms, flex-basis 500ms, padding 1ms;
+                                opacity: .99;
+                                padding: 6%;   
+                                right: 0px;  
+                                z-index: 0;
+                                transition: right 500ms, opacity 1ms, z-;
                                 i {
+                                                                     
                                     transform-origin: 50% 50%;
-                                    transform: rotate(360deg);                                    
-                                    transition: transform 500ms 100ms;
+                                    transform: rotate(360deg);                                  
+                                    transition: transform 500ms ;
                                 }
                             }
                             .menu-main-container-carte-repas_content_text {
-                                flex-basis: 75%;
-                                transition: flex-basis 500ms;   
-                                span:first-child {
-                                    flex-basis: 90%;
-                                }                
+                                width: 77%;
+                                transition: width 250ms;            
+                                div {
+                                    gap: 10px;
+                                    transition: gap 500ms;
+                                }    
                             }
                         }
                         h3{

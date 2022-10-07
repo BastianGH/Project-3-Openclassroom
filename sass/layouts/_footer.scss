@@ -3,6 +3,9 @@
     background-color: #323232;
     padding:5% 5% 10%;
     gap:10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     @extend .flex-col;
     @include tablette-flex;
     @include desktop-flex;
@@ -21,5 +24,4 @@
     >* {
         @include tablette-element;
     }
-    
 }
