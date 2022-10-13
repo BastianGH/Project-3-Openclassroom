@@ -10,7 +10,24 @@
             animation: acceuil_pop-up 1000ms both 2500ms; 
         }
         #gif {
-            padding: 15% 34%;
+            @media (min-width: 750px) and (max-width: 1000px) {
+                padding: 150px 0 0 100px;
+                width: 90%;
+            }
+            @media (min-width: 1000px) {
+                padding: 300px 0 0 350px;
+                width: 70%;
+            }
+            @media (min-width: 1600px) {
+                padding: 100px 0 0 680px;
+                width: 70%;
+            }
+            @media (max-width: 400px) {
+                padding: 300px 0 0 100px;
+                width: 70%;
+            }
+            padding: 350px 0 0 110px;
+            width: 85%;
             animation: gif_pop-up 3000ms both ; 
         }
     }
