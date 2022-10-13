@@ -54,11 +54,13 @@
                     i:first-child{
                         position: absolute;
                         opacity: 0;
+                        transition: all 800ms ease-in;
                     }
                     i:last-child {
                         opacity: 1;
                         position: relative;
                         color: $colour-primary;
+                        transition: all 800ms ease-out;
                     }                     
                 }
             }

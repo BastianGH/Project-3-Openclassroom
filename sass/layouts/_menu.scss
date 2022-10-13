@@ -57,6 +57,7 @@
                     @extend .flex-col;
                     &_content{
                         position: relative;
+                        overflow: hidden;
                         background-color: #fff;
                         border-radius: 20px 20px 20px 20px;
                         padding-left: 3%;
@@ -64,6 +65,7 @@
                         justify-content: space-between;
                         z-index: 0;
                         @extend .box-shadow;
+                        transition: overflow 500ms;
                         &:nth-child(1) {
                             animation: menu_pop-up 800ms both; 
                         }
@@ -78,7 +80,7 @@
                             color: white;
                         }
                         &_text {
-                            padding: 3% 0 4%;
+                            padding: 15px 0;
                             width: 100%;
                             z-index: 1;   
                             transition: width 500ms;
@@ -106,25 +108,18 @@
                         }
                         &_check {
                             position: absolute;
+                            right: -100px;
                             background-color: $colour-tertiary;
                             border-radius: 0 20px 20px 0;
-                            flex-basis: 0%;
-                            opacity: 0;
-                            transform-origin: 0% 50%;
-                            right: -67px;
-                            z-index: 0;
-                            padding: 6%;   
-                            transition: right 500ms, opacity 500ms, z-index 1ms, padding 1ms 500ms;
+                            width: 80px;
+                            padding: 26.5px;
+                            height: 100%;
+                            transition: right 500ms ease-out;
                         }
                         &:hover {
-                            /***** FINITIONS A PRODUIRE SUR L'ANIMATION ******/ 
-                            /*** -Vérifier que la boite verte se comporte comme on l'attend au final  ***/
                             .menu-main-container-carte-repas_content_check {
-                                opacity: .99;
-                                padding: 6%;   
                                 right: 0px;  
-                                z-index: 0;
-                                transition: right 500ms, opacity 1ms, z-;
+                                transition: right 500ms ease-out;
                                 i {
                                                                      
                                     transform-origin: 50% 50%;
@@ -133,7 +128,7 @@
                                 }
                             }
                             .menu-main-container-carte-repas_content_text {
-                                width: 77%;
+                                width: 65%;
                                 transition: width 250ms;            
                                 div {
                                     gap: 10px;

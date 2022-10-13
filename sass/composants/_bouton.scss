@@ -5,4 +5,10 @@
     border-radius: 40px;
     background: linear-gradient($colour-secondary, $colour-primary);
     @extend .box-shadow;
+    transition: all 500ms ease-in;
+    &:hover {
+        background: linear-gradient( lighten($colour-secondary, 2.5%), lighten($colour-primary, 1%));
+        @extend .box-hovered-shadow;
+        transition: all 500ms ease-in-out;
+    }
 }

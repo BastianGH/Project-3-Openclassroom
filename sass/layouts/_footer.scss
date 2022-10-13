@@ -21,6 +21,9 @@
             width: 35px
         }
     }
+    a {
+        color: white;
+    }
     >* {
         @include tablette-element;
     }

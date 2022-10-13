@@ -4,8 +4,15 @@
     box-sizing: border-box;
     body {
         margin: 0;
-        padding:0;
-        height:100%;
+        padding: 0;
+        height: 100%;
+        #Homepage {
+            animation: acceuil_pop-up 1000ms both 2500ms; 
+        }
+        #gif {
+            padding: 15% 34%;
+            animation: gif_pop-up 3000ms both ; 
+        }
     }
     html {
         height:100%;
