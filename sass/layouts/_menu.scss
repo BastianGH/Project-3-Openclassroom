@@ -75,6 +75,9 @@
                         &:nth-child(3) {
                             animation: menu_pop-up 800ms 400ms both;
                         }
+                        &:nth-child(4) {
+                            animation: menu_pop-up 800ms 600ms both;
+                        }
                         i{
                             font-size: 170%;
                             color: white;
@@ -124,7 +127,7 @@
                                                                      
                                     transform-origin: 50% 50%;
                                     transform: rotate(360deg);                                  
-                                    transition: transform 500ms ;
+                                    transition: transform 300ms 200ms;
                                 }
                             }
                             .menu-main-container-carte-repas_content_text {
