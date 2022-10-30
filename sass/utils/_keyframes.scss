@@ -16,13 +16,26 @@
         opacity: 1;
     }
 }
-@keyframes gif_pop-up {
+@keyframes spinner_pop-up {
     0% {
-        position: relative;
         opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 40%, $colour-primary 45%, $colour-secondary 50%);
+    }
+    66% {
+        opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 40%, $colour-primary 45%, $colour-secondary 50%);
     }
     100% {
-        opacity: 0;
-        position: absolute;
+        opacity: 0;        
+    }
+}
+@keyframes loading_pop-up {
+    0%{
+        transform: rotate(0deg);
+        box-shadow: $colour-secondary 100px 0px 100px 100px;
+    }
+    100% {
+        transform: rotate(360deg);
+        
     }
 }

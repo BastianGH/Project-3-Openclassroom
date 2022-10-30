@@ -28,7 +28,8 @@
             right: 25px;
             padding: 2% 4%;
             background-color: $colour-tertiary;
-            color: green;
+            color: $green-text;
+            border-radius: 2px;
             font-weight: bold;
             @include tablette-nouveau;
             @include desktop-nouveau;
@@ -46,21 +47,24 @@
             padding: 4%;
             &__heart {
                 font-size: 180%;
-                i:last-child {
+                position: relative;
+                width: 30px;
+                :last-child {
                     opacity: 0;
                     position: absolute;
                 }                
                 &:hover{
                     i:first-child{
-                        position: absolute;
                         opacity: 0;
-                        transition: all 800ms ease-in;
+                        position: absolute;
                     }
-                    i:last-child {
+                    :last-child {
                         opacity: 1;
-                        position: relative;
-                        color: $colour-primary;
-                        transition: all 800ms ease-out;
+                        position: relative;      
+                        -webkit-text-fill-color: transparent;
+                        background-image: linear-gradient(180deg, $colour-primary, $colour-secondary);
+                        -webkit-background-clip: text;   
+                        transition: all 500ms ease-out 100ms ;
                     }                     
                 }
             }

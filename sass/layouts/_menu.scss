@@ -1,7 +1,7 @@
 .menu{
     &-header{
         padding: 0% 0 1%;
-        gap:22%;
+        gap: 22%;
             &__fa {
                 color: black;
                 font-size:150%;
@@ -131,8 +131,19 @@
                                 }
                             }
                             .menu-main-container-carte-repas_content_text {
-                                width: 65%;
-                                transition: width 250ms;            
+                                width: 90%;
+                                @media screen and (max-width: 550px ) {
+                                    width: 80%;
+                                }
+                                @media screen and (min-width: 1000px ) {
+                                    width: 180px;
+                                }
+                                @media screen and (min-width: 1200px ) {
+                                    width: 230px;
+                                }
+                                @media screen and (min-width: 1400px ) {
+                                    width: 300px;
+                                }
                                 div {
                                     gap: 10px;
                                     transition: gap 500ms;
@@ -140,7 +151,7 @@
                             }
                         }
                         h3{
-                            margin:0 0 2%;
+                            margin:0 0 7px;
                         }
                     }
                 }              
