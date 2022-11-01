@@ -19,11 +19,50 @@
 @keyframes spinner_pop-up {
     0% {
         opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 120px, $colour-primary 135px, $colour-secondary 150px);
+    }
+    66% {
+        opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 120px, $colour-primary 135px, $colour-secondary 150px);
+    }
+    100% {
+        opacity: 0;        
+    }
+}
+@keyframes spinner_pop-up2 {
+    0% {
+        opacity: 1;
         background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 40%, $colour-primary 45%, $colour-secondary 50%);
     }
     66% {
         opacity: 1;
         background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 40%, $colour-primary 45%, $colour-secondary 50%);
+    }
+    100% {
+        opacity: 0;        
+    }
+}
+@keyframes spinner_pop-up3 {
+    0% {
+        opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 400px, $colour-primary 430px, $colour-secondary 460px);
+    }
+    66% {
+        opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 400px, $colour-primary 430px, $colour-secondary 460px);
+    }
+    100% {
+        opacity: 0;        
+    }
+}
+@keyframes spinner_pop-up4 {
+    0% {
+        opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 175px, $colour-primary 185px, $colour-secondary 200px);
+    }
+    66% {
+        opacity: 1;
+        background:radial-gradient(circle at center, $colour-secondary, $colour-secondary 175px, $colour-primary 185px, $colour-secondary 200px);
     }
     100% {
         opacity: 0;        
